@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
